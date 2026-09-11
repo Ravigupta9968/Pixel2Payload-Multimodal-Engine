@@ -12,7 +12,7 @@ from google.genai import types
 
 load_dotenv()
 
-app = FastAPI(title="VisionParse: Gemini Extraction Engine")
+app = FastAPI(title="Pixel2Payload: Extraction Engine")
 
 app.add_middleware(
     CORSMiddleware,
@@ -49,8 +49,10 @@ async def extract_data(
             raise HTTPException(status_code=400, detail="File provided is not an image.")
 
         if client is None:
-            raise HTTPException(status_code=500, detail="Gemini client not configured. Set GEMINI_API_KEY.")
-
+            raise HTTPException(
+                status_code=500, 
+                detail="API key is not configured on the server. Please set GEMINI_API_KEY."
+            )
         image_bytes = await file.read()
         image = Image.open(io.BytesIO(image_bytes))
 

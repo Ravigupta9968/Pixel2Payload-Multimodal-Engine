@@ -38,8 +38,11 @@ export default function App() {
           body: formData,
       });
 
-      if (!response.ok) throw new Error(`Server error: ${response.statusText}`);
-      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || `Server error: ${response.statusText}`);
+      }
+
       const data = await response.json();
       setResult(data);
     } catch (err) {
