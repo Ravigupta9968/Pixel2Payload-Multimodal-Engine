@@ -5,6 +5,7 @@ Pixel2Payload solves a common engineering bottleneck: turning messy, unstructure
 Basic OCR just dumps raw text, and feeding an image to a standard LLM usually results in an unpredictable wall of text that breaks frontend components. This project acts as a bridge, combining a vision-capable AI model with strict backend validation to guarantee the output is always a structured, actionable payload.
 
 <img width="977" height="524" alt="image" src="https://github.com/user-attachments/assets/6b3a6789-8937-420b-87ce-2e81bb6aa82a" />
+Demo: 👉 https://pixel2payload-multimodal-engine.vercel.app/
 <img width="1273" height="622" alt="image_1" src="https://github.com/user-attachments/assets/fb2a72e7-3a47-4215-bb5c-24edf940cad1" />
 
 
