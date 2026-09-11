@@ -33,9 +33,9 @@ export default function App() {
     formData.append('query', query);
 
     try {
-      const response = await fetch('http://localhost:8000/extract', {
-        method: 'POST',
-        body: formData,
+      const response = await fetch('https://visionparse-backend.onrender.com/extract', {
+          method: 'POST',
+          body: formData,
       });
 
       if (!response.ok) throw new Error(`Server error: ${response.statusText}`);
