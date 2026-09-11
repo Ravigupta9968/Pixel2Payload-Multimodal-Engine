@@ -33,8 +33,8 @@ export default function App() {
     formData.append('query', query);
 
     try {
-      const response = await fetch('https://visionparse-backend.onrender.com/extract', {
-          method: 'POST',
+      const response = await fetch('https://pixel2payload-multimodal-engine.onrender.com/extract', {
+         method: 'POST',
           body: formData,
       });
 
